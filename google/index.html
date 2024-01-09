@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    :root {
+      --space-small: 4px;
+      --space-medium: 8px;
+      --space-large: 16px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    #calendar .container {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0;
+      background-color: beige;
+      margin: 0 auto;
+      padding: 0;
+    }
+    #calendar .container .day {
+      background-color: aliceblue;
+      grid-column-start: 0;
+      place-items: center;
+      display: flex;
+      margin: 0;
+      padding: var(--space-large);
+    }
+    .offset1 {
+      grid-column-start: 1;
+    }
+    .offset2 {
+      grid-column-start: 2;
+    }
+    .offset3 {
+      grid-column-start: 3;
+    }
+    .offset4 {
+      grid-column-start: 4;
+    }
+    .offset5 {
+      grid-column-start: 5;
+    }
+    .offset6 {
+      grid-column-start: 6;
+    }
+    .offset7 {
+      grid-column-start: 7;
+    }
+  </style>
+
+  <body>
+    <div id="calendar">
+      <ul class="container">
+        <li class="day offset3">1</li>
+        <li class="day">2</li>
+        <li class="day">3</li>
+        <li class="day">4</li>
+        <li class="day">5</li>
+        <li class="day">6</li>
+        <li class="day">7</li>
+        <li class="day">...</li>
+        <li class="day">29</li>
+        <li class="day">30</li>
+        <li class="day">31</li>
+      </ul>
+    </div>
+  </body>
+</html>
