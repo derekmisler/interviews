@@ -11,7 +11,7 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>Welcome to Derek.js!</h1>
-        <div className={styles.grid}></div>
+        <div className={styles.content}></div>
       </main>
     </div>
   );
