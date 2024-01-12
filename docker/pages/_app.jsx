@@ -1,7 +1,6 @@
 /**
  * Import your global css before MyApp
  */
-import '../styles/variables.css';
 import '../styles/globals.css';
 
 /**
