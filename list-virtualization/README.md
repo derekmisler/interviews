@@ -4,7 +4,7 @@ The goal of this exercise, is to render every word in the English language in a 
 
 In our `App.tsx` file, there's a hook already written for `useDictionary()`. This hook will fetch the entire dictionary and return it in a nice array.
 
-This dictionary has nearly 400K words in it, far too many elements to write to the DOM at once. In fact, it will almost certainly crash your web browser. For this reason, there's a component called `<SafelyRenderChildren/>`. This component will put an artificial limit on the amount of children you can render at once, to ensure that there's no chance of crashing the interview :)
+This dictionary has nearly 400K words in it, far too many elements to write to the DOM at once. In fact, it will almost certainly crash your web browser. For this reason, there's a component called `<SafelyRenderChildren/>`. This component will put an artificial limit on the amount of children you can render at once, to ensure that there's no chance of crashing the interview.
 
 ### What is virtualization?
 
@@ -24,10 +24,9 @@ The goal is to deliver a user experience that feels as seamless as possible.
 
 1. Add a search box to the list.
 
-
 ### Parameters
 
 - Each list item has a known height (30px)
 - `<SafelyRenderChildren/>` limits the maximum list items to 2,500
 - The amount of items you render at one time is completely up to you, and should be tuned for a balance of performance and usibility (we want no visual evidence of loading when mousewheel scrolling, and minimal evidence of loading when scrolling large distances at one time)
-- There is an optional included `useScrollPosition` hook that you can use to quickly get the current scroll position.
+- There is an optional library, `@uidotdev/usehooks`, that contains [an Intersection Observer hook](https://usehooks.com/useintersectionobserver) that might be useful!

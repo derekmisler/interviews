@@ -1,14 +1,22 @@
+import styled from "styled-components";
 import { Item } from "./Item";
 import { SafelyRenderChildren } from "./SafelyRenderChildren";
 
-export interface ListProps {
-  items: string[];
-}
+const ListWrapper = styled.div``;
 
-export function List({ items }: ListProps) {
+const Ul = styled.ul`
+  border: 1px solid var(--accent);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: calc(var(--list-item-height) * 25);
+  overflow: auto;
+`;
+
+export function List({ items }: { items: string[] }) {
   return (
-    <div className="list-wrapper">
-      <ul>
+    <ListWrapper>
+      <Ul>
         {/**
          * Note: `SafelyRenderChildren` should NOT be removed while solving
          * this interview. This prevents rendering too many list items and
@@ -21,7 +29,7 @@ export function List({ items }: ListProps) {
             <Item key={word}>{word}</Item>
           ))}
         </SafelyRenderChildren>
-      </ul>
-    </div>
+      </Ul>
+    </ListWrapper>
   );
 }
